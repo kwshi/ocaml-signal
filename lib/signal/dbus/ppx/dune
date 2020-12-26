@@ -1,5 +1,0 @@
-(library
- (name signal_dbus_patch)
- (preprocess (pps ppxlib.metaquot))
- (kind ppx_rewriter)
- (libraries ppxlib containers))
