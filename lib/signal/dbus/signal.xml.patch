@@ -1,0 +1,32 @@
+--- signal.xml	2020-12-25 15:46:35.825589678 -0800
++++ signal-patch.xml	2020-12-25 15:47:25.459722308 -0800
+@@ -17,29 +17,18 @@
+     <method name="sendMessage">
+       <arg direction="in" type="s"/>
+       <arg direction="in" type="as"/>
+       <arg direction="in" type="s"/>
+       <arg direction="out" type="x"/>
+       <annotation name="org.freedesktop.DBus.Method.Error" value="org.asamk.Signal.Error.AttachmentInvalid"/>
+       <annotation name="org.freedesktop.DBus.Method.Error" value="org.asamk.Signal.Error.Failure"/>
+       <annotation name="org.freedesktop.DBus.Method.Error" value="org.asamk.Signal.Error.InvalidNumber"/>
+     </method>
+-    <method name="sendMessage">
+-      <arg direction="in" type="s"/>
+-      <arg direction="in" type="as"/>
+-      <arg direction="in" type="as"/>
+-      <arg direction="out" type="x"/>
+-      <annotation name="org.freedesktop.DBus.Method.Error" value="org.asamk.Signal.Error.AttachmentInvalid"/>
+-      <annotation name="org.freedesktop.DBus.Method.Error" value="org.asamk.Signal.Error.Failure"/>
+-      <annotation name="org.freedesktop.DBus.Method.Error" value="org.asamk.Signal.Error.InvalidNumber"/>
+-      <annotation name="org.freedesktop.DBus.Method.Error" value="org.asamk.Signal.Error.UnregisteredUser"/>
+-      <annotation name="org.freedesktop.DBus.Method.Error" value="org.asamk.Signal.Error.UntrustedIdentity"/>
+-    </method>
+     <method name="sendEndSessionMessage">
+       <arg direction="in" type="as"/>
+       <annotation name="org.freedesktop.DBus.Method.Error" value="org.asamk.Signal.Error.Failure"/>
+       <annotation name="org.freedesktop.DBus.Method.Error" value="org.asamk.Signal.Error.InvalidNumber"/>
+       <annotation name="org.freedesktop.DBus.Method.Error" value="org.asamk.Signal.Error.UnregisteredUser"/>
+       <annotation name="org.freedesktop.DBus.Method.Error" value="org.asamk.Signal.Error.UntrustedIdentity"/>
+     </method>
+     <method name="sendGroupMessage">
+       <arg direction="in" type="s"/>

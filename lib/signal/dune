@@ -1,0 +1,8 @@
+(library
+ (public_name signal)
+ (libraries 
+  angstrom
+  containers 
+  fmt
+  obus 
+  signal.dbus))
