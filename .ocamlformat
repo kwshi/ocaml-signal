@@ -4,3 +4,4 @@ break-collection-expressions = fit-or-vertical
 wrap-fun-args = false
 sequence-style = before
 break-cases = fit-or-vertical
+indicate-multiline-delimiters = closing-on-separate-line

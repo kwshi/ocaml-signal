@@ -1,4 +1,3 @@
-
 type 'msg t
 
 val make : ('event -> 'msg) -> 'event Signal_api.Event.t -> 'msg t

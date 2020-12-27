@@ -7,19 +7,21 @@
 (rule
  (target signal.xml)
  (deps signal.xml.patch)
- (action 
- (progn
-  (with-stdout-to signal.xml 
-   (run obus-introspect org.asamk.Signal /org/asamk/Signal))
-  (run patch --verbose -u signal.xml signal.xml.patch))))
+ (action
+  (progn
+   (with-stdout-to
+    signal.xml
+    (run obus-introspect org.asamk.Signal /org/asamk/Signal))
+   (run patch --verbose -u signal.xml signal.xml.patch))))
 
 (rule
  (deps signal.xml)
  (targets signal_interfaces.ml signal_interfaces.mli)
- (action (run obus-gen-interface signal.xml)))
+ (action
+  (run obus-gen-interface signal.xml)))
 
 (rule
  (deps signal.xml)
  (targets signal_client.ml signal_client.mli)
- (action (run obus-gen-client signal.xml)))
-
+ (action
+  (run obus-gen-client signal.xml)))

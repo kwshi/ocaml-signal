@@ -32,7 +32,8 @@ let run proxy { init; update; hooks } =
         let+ msg = Action.run proxy action in
         match msg with
         | None -> ()
-        | Some msg -> action_push (Some msg) )
+        | Some msg -> action_push (Some msg)
+      )
   in
   let init_model, init_action = init () in
   let* init_model = init_model and* hook_msgs = Hook.listen proxy hooks in

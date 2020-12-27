@@ -4,7 +4,8 @@ module Event = Event
 let connect bus =
   ( match bus with
   | `Session -> OBus_bus.session
-  | `System -> OBus_bus.system )
+  | `System -> OBus_bus.system
+  )
     ()
 
 let proxy conn =

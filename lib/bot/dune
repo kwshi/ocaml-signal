@@ -1,7 +1,4 @@
 (library
  (public_name signal.bot)
  (name signal_bot)
- (libraries
-  containers
-  signal.api
-  lwt))
+ (libraries containers signal.api lwt))
