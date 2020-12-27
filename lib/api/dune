@@ -1,0 +1,4 @@
+(library
+ (name signal_api)
+ (public_name signal.api)
+ (libraries obus signal.api.dbus))

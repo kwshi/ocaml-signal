@@ -1,7 +1,7 @@
 (library
  (name signal_dbus)
  (flags -w -33)
- (public_name signal.dbus)
+ (public_name signal.api.dbus)
  (libraries obus))
 
 (rule
