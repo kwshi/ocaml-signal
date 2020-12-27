@@ -5,12 +5,12 @@ This OCaml library provides bindings to the DBus API provided by
 for the [_Signal_ messaging platform](https://signal.org/en/).  It can be used
 to accomplish various tasks such as:
 
-- Building a custom _Signal_ chat client (or, say, integrating it into your
+- Building a custom Signal chat client (or, say, integrating it into your
   favorite text editor, i.e. _Emacs_).
 
-- Building a _Signal_ chat-bot.  You can use the `signal.api` library to setup
-  a simple chat-bot with just a few lines of code, or use the
-  [Elm](https://guide.elm-lang.org/architecture/)-like `signal.bot` framework
+- Building a Signal chat-bot.  You can use the `signal.api` library to setup a
+  simple chat-bot with just a few lines of code, or use the
+  [Elm-like](https://guide.elm-lang.org/architecture/) `signal.bot` framework
   to build a more sophisticated, stateful chat-bot.  See the
   [examples](#examples) for a primer on how to do so.
 
