@@ -8,6 +8,8 @@ type message_received =
   ; attachments : string list
   }
 
+type receipt_received = { timestamp : int64; sender : string }
+
 type sync_message_received =
   { timestamp : int64
   ; source : string
@@ -20,5 +22,7 @@ type sync_message_received =
 val listen : OBus_proxy.t -> 'event t -> 'event Lwt_stream.t Lwt.t
 
 val message_received : message_received t
+
+val receipt_received : receipt_received t
 
 val sync_message_received : sync_message_received t

@@ -10,6 +10,8 @@ type message_received =
   ; attachments : string list
   }
 
+type receipt_received = { timestamp : int64; sender : string }
+
 type sync_message_received =
   { timestamp : int64
   ; source : string
@@ -30,6 +32,10 @@ let message_received =
     Signal_dbus.Client.message_received
   in
   { timestamp; sender; group_id; message; attachments }
+
+let receipt_received =
+  let< timestamp, sender = Signal_dbus.Client.receipt_received in
+  { timestamp; sender }
 
 let sync_message_received =
   let< timestamp, source, destination, group_id, message, attachments =
