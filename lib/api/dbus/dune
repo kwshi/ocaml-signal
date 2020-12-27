@@ -5,13 +5,21 @@
  (libraries obus))
 
 (rule
+ (target signal.xml.upstream)
+ (action
+  (with-stdout-to signal.xml.upstream 
+   (run obus-introspect org.asamk.Signal /org/asamk/Signal))))
+
+(rule
+ (alias dbus-check)
+ (action (diff signal.xml.unpatched signal.xml.upstream)))
+
+(rule
  (target signal.xml)
- (deps signal.xml.patch)
+ (deps signal.xml.unpatched signal.xml.patch)
  (action
   (progn
-   (with-stdout-to
-    signal.xml
-    (run obus-introspect org.asamk.Signal /org/asamk/Signal))
+   (copy signal.xml.unpatched signal.xml)
    (run patch --verbose -u signal.xml signal.xml.patch))))
 
 (rule
