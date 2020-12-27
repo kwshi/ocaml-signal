@@ -1,9 +1,9 @@
-# OCaml bindings to [`signal-cli`](/AsamK/signal-cli) DBus API
+# OCaml bindings to [`signal-cli`](https://github.com/AsamK/signal-cli) DBus API
 
 This OCaml library provides bindings to the DBus API provided by
-[`signal-cli`](/AsamK/signal-cli), a command-line front-end for the [_Signal_
-messaging platform](https://signal.org/en/).  It can be used to accomplish
-various tasks such as:
+[`signal-cli`](https://github.com/AsamK/signal-cli), a command-line front-end
+for the [_Signal_ messaging platform](https://signal.org/en/).  It can be used
+to accomplish various tasks such as:
 
 - Building a custom _Signal_ chat client (or, say, integrating it into your
   favorite text editor, i.e. _Emacs_).
