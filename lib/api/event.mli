@@ -8,7 +8,10 @@ type message_received =
   ; attachments : string list
   }
 
-type receipt_received = { timestamp : int64; sender : string }
+type receipt_received =
+  { timestamp : int64
+  ; sender : string
+  }
 
 type sync_message_received =
   { timestamp : int64
